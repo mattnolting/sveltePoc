@@ -125,31 +125,15 @@ Our approach reimagines components as living, breathing entities that:
 
 ### Key Technical Innovations
 
-1. **Dynamic State Management**
-   Imagine a component that can effortlessly toggle between states:
-   ```svelte
-   <Component
-     states={{
-       expanded: true,
-       disabled: false
-     }}
-     modifiers={{
-       primary: true
-     }}
-   >
-     Adaptive Content
-   </Component>
-   ```
+**Type-Safe Configuration**
+  - Strongly typed interfaces
+  - Compile-time type checking
+  - Predictable prop handling
 
-2. **Type-Safe Configuration**
-   - Strongly typed interfaces
-   - Compile-time type checking
-   - Predictable prop handling
-
-3. **Minimal Boilerplate**
-   - Single component definition
-   - Automatic class generation
-   - Intuitive state management
+**Minimal Boilerplate**
+  - Single component definition
+  - Automatic class generation
+  - Intuitive state management
 
 ### The Benefits Unpacked
 
@@ -189,14 +173,7 @@ This approach solves real problems:
 
 ```svelte
 <Component
-  name="alert"
-  states={{
-    expanded: isDetailVisible,
-    disabled: !isInteractive
-  }}
-  modifiers={{
-    warning: isImportant
-  }}
+  name="alert" as="div"
 >
   Dynamic Alert Content
 </Component>
