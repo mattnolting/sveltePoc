@@ -4,12 +4,13 @@ title: 'Crafting Flexible Componentry:'
 
 <script>
   import Alert from '$components/alert/Alert.svelte';
+  import visualComparison from '$images/visual-comparison.png';
 </script>
 
 <h1 class="pf-v6-c-title page-title">{title}</h1><br> A New Approach to UI Development
 
 <figure class="center pres">
-  <img src="./src/lib/images/visual-comparison.png" alt="A new approach to UI visual comparison" />
+  <img src="{visualComparison}" alt="A new approach to UI visual comparison" />
 </figure>
 
 <h2 class="pf-v6-c-title center">The Challenge of Component Design</h2>
