@@ -5,6 +5,9 @@ yarn.lock
 build/
 node_modules/
 
+.DS_Store
+
+
 # Compiled source #
 ###################
 *.com
