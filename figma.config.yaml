@@ -1,0 +1,10 @@
+figma:
+  autoUpdate: false
+  outputDir: ".figma-components"
+  plugins:
+  - "@figma/svelte-generator"
+
+build:
+  hooks:
+    preBuild: ["figma:sync"]
+    preCommit: ["figma:validate"]
