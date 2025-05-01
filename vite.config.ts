@@ -2,7 +2,6 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { GLOBAL_ALIASES } from "./src/config/helpers/global.aliases.js";
 import { mdsvex } from 'mdsvex';
-import figmaPlugin from './plugins/figma';
 
 // import path from 'path';
 
@@ -22,14 +21,6 @@ export default defineConfig({
     },
     mdsvex({
       extensions: ['.svx', '.md'],
-    }),
-		figmaPlugin({
-      watch: process.env.FIGMA_AUTO_UPDATE === 'true',
-      outDir: '.figma-components',
-      // Leverages Bun's built-in watchers for efficiency
-      watchOptions: {
-        usePolling: false
-      }
     })
 	],
 	server: {
@@ -38,12 +29,3 @@ export default defineConfig({
 		}
 	},
 });
-
-{
-	markup: ({ content }) => processHbs(content),
-},
-mdsvex({
-	extensions: ['.svx', '.md'],
-}),		
-
-
